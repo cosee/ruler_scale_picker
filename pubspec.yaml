@@ -1,0 +1,27 @@
+name: ruler_scale_picker
+description: A highly customisable, scrollable widget in a ruler-like style from which you can select values.
+homepage: https://pub.dev/publishers/cosee.biz/packages
+repository: https://github.com/cosee/ruler_scale_picker/tree/main
+issue_tracker: https://github.com/cosee/ruler_scale_picker/issues
+screenshots:
+  - description: 'Default appearance of NumericRulerScalePicker'
+    path: example/screenshots/default.webp
+topics:
+  - ruler
+  - scrollable
+
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  cosee_lints: ^0.2.0
+  dart_code_metrics: ^5.7.6
+  golden_toolkit: ^0.15.0

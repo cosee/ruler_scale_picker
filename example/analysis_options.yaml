@@ -1,0 +1,3 @@
+dart_code_metrics:
+  extends:
+    - package:cosee_lints/metrics.yaml

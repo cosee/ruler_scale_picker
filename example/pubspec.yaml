@@ -1,0 +1,26 @@
+name: ruler_scale_picker_example
+description: Demonstrates how to use the ruler_scale_picker.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  ruler_scale_picker:
+    path: ../
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  cosee_lints: ^0.2.0
+  dart_code_metrics: ^5.7.6
+
+
+flutter:
+  uses-material-design: true
+
