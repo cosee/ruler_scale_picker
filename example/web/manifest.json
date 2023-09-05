@@ -1,6 +1,6 @@
 {
-    "name": "example",
-    "short_name": "example",
+    "name": "ruler_scale_picker_example",
+    "short_name": "ruler_scale_picker_example",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
