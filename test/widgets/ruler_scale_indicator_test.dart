@@ -45,7 +45,7 @@ void main() {
 
     await tester.pumpWidgetBuilder(
       builder.build(),
-      surfaceSize: const Size(300, 1050),
+      surfaceSize: const Size(300, 1100),
     );
     await screenMatchesGolden(tester, 'ruler_scale_indicator');
   });

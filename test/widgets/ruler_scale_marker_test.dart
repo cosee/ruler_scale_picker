@@ -29,7 +29,7 @@ void main() {
 
     await tester.pumpWidgetBuilder(
       builder.build(),
-      surfaceSize: const Size(200, 500),
+      surfaceSize: const Size(200, 525),
     );
     await screenMatchesGolden(tester, 'ruler_scale_marker');
   });

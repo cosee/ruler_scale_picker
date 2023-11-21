@@ -34,7 +34,7 @@ void main() {
 
     await tester.pumpWidgetBuilder(
       builder.build(),
-      surfaceSize: const Size(100, 500),
+      surfaceSize: const Size(100, 625),
     );
     await screenMatchesGolden(tester, 'ruler_value_view');
   });
