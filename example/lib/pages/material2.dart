@@ -7,7 +7,8 @@ class Material2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: Theme.of(context).copyWith(
+      data: ThemeData.from(
+        colorScheme: Theme.of(context).colorScheme,
         useMaterial3: false,
       ),
       child: const DefaultPage(
