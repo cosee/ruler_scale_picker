@@ -135,7 +135,7 @@ class _NumericRulerScalePickerState extends State<NumericRulerScalePicker> {
   }
 
   Widget _scaleIndicatorBuilder(
-    _,
+    BuildContext _,
     Axis orientation,
     int value, {
     required bool isMajorIndicator,
@@ -147,11 +147,11 @@ class _NumericRulerScalePickerState extends State<NumericRulerScalePicker> {
     );
   }
 
-  Widget _scaleMarkerBuilder(_, Axis orientation) {
+  Widget _scaleMarkerBuilder(BuildContext _, Axis orientation) {
     return RulerScaleMarker(orientation: orientation);
   }
 
-  Widget _valueDisplayBuilder(_, int value) {
+  Widget _valueDisplayBuilder(BuildContext _, int value) {
     return RulerValueView(
       maxLetterCount: _neededPositions(
         _rulerPickerController.getValueAt(0),
@@ -162,14 +162,14 @@ class _NumericRulerScalePickerState extends State<NumericRulerScalePicker> {
     );
   }
 
-  Widget _decreaseButtonBuilder(_, VoidCallback action) {
+  Widget _decreaseButtonBuilder(BuildContext _, VoidCallback action) {
     return RulerButton(
       onPressed: action,
       icon: Icons.remove,
     );
   }
 
-  Widget _increaseButtonBuilder(_, VoidCallback action) {
+  Widget _increaseButtonBuilder(BuildContext _, VoidCallback action) {
     return RulerButton(
       onPressed: action,
       icon: Icons.add,
