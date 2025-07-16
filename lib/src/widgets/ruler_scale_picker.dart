@@ -49,32 +49,30 @@ class RulerScalePicker<T> extends StatelessWidget {
       deactivated: !options.isEnabled,
       child: ListenableBuilder(
         listenable: controller,
-        builder: (_, __) {
-          return Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              if (options.showControls)
-                ControlArea<T>(
-                  decrease: controller.decrease,
-                  increase: controller.increase,
-                  value: controller.value,
-                  decreaseButtonBuilder: decreaseButtonBuilder,
-                  increaseButtonBuilder: increaseButtonBuilder,
-                  valueDisplayBuilder: valueDisplayBuilder,
-                ),
-              Expanded(
-                child: RulerArea<T>(
-                  rulerController: controller,
-                  indicatorBuilder: scaleIndicatorBuilder,
-                  scaleMarkerBuilder: scaleMarkerBuilder,
-                  majorIndicatorInterval: options.majorIndicatorInterval,
-                  indicatorExtend: options.indicatorExtend,
-                  orientation: options.orientation,
-                ),
+        builder: (_, _) => Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (options.showControls)
+              ControlArea<T>(
+                decrease: controller.decrease,
+                increase: controller.increase,
+                value: controller.value,
+                decreaseButtonBuilder: decreaseButtonBuilder,
+                increaseButtonBuilder: increaseButtonBuilder,
+                valueDisplayBuilder: valueDisplayBuilder,
               ),
-            ],
-          );
-        },
+            Expanded(
+              child: RulerArea<T>(
+                rulerController: controller,
+                indicatorBuilder: scaleIndicatorBuilder,
+                scaleMarkerBuilder: scaleMarkerBuilder,
+                majorIndicatorInterval: options.majorIndicatorInterval,
+                indicatorExtend: options.indicatorExtend,
+                orientation: options.orientation,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
