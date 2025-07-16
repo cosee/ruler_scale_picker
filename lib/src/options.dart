@@ -9,14 +9,14 @@ class RulerScalePickerOptions {
     this.majorIndicatorInterval = 10,
     this.indicatorExtend = 10,
     this.showControls = true,
-  })  : assert(
-          indicatorExtend > 0,
-          '[indicatorExtend] must be greater 0',
-        ),
-        assert(
-          majorIndicatorInterval > 0,
-          '[majorIndicatorInterval] must be greater 0',
-        );
+  }) : assert(
+         indicatorExtend > 0,
+         '[indicatorExtend] must be greater 0',
+       ),
+       assert(
+         majorIndicatorInterval > 0,
+         '[majorIndicatorInterval] must be greater 0',
+       );
 
   /// Whether the widget should be enabled or not.
   final bool isEnabled;

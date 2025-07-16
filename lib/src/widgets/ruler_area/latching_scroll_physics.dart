@@ -6,7 +6,7 @@ class LatchingScrollPhysics extends ScrollPhysics {
   ///
   /// Latches onto offsets of size [itemExtend].
   const LatchingScrollPhysics(double itemExtend, {super.parent})
-      : _itemExtend = itemExtend;
+    : _itemExtend = itemExtend;
 
   final double _itemExtend;
 

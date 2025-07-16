@@ -9,9 +9,10 @@ void main() {
     });
 
     test('increase value from negative', () {
-      final controller =
-          NumericRulerScalePickerController(firstValue: -5, initialValue: -4)
-            ..increase();
+      final controller = NumericRulerScalePickerController(
+        firstValue: -5,
+        initialValue: -4,
+      )..increase();
       expect(controller.value, -3);
     });
 
@@ -22,9 +23,10 @@ void main() {
     });
 
     test('decrease value from negative', () {
-      final controller =
-          NumericRulerScalePickerController(firstValue: -5, initialValue: -4)
-            ..decrease();
+      final controller = NumericRulerScalePickerController(
+        firstValue: -5,
+        initialValue: -4,
+      )..decrease();
       expect(controller.value, -5);
     });
 
@@ -117,8 +119,10 @@ void main() {
     });
 
     test('get start index of negative value', () {
-      final controller =
-          NumericRulerScalePickerController(initialValue: -5, firstValue: -10);
+      final controller = NumericRulerScalePickerController(
+        initialValue: -5,
+        firstValue: -10,
+      );
       expect(controller.index, 5);
     });
 
@@ -128,8 +132,10 @@ void main() {
     });
 
     test('get index of negative value', () {
-      final controller =
-          NumericRulerScalePickerController(initialValue: -5, firstValue: -10);
+      final controller = NumericRulerScalePickerController(
+        initialValue: -5,
+        firstValue: -10,
+      );
       expect(controller.getIndexOf(-4), 6);
     });
 

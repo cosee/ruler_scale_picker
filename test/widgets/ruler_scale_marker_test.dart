@@ -4,28 +4,29 @@ import 'package:ruler_scale_picker/src/widgets/default/scale_marker.dart';
 
 void main() {
   testGoldens('RulerScaleMarker', (tester) async {
-    final builder = GoldenBuilder.column(
-      wrap: (widget) => SizedBox.square(
-        dimension: 200,
-        child: widget,
-      ),
-    )
-      ..addScenario(
-        'horizontal',
-        const Center(
-          child: RulerScaleMarker(
-            orientation: Axis.horizontal,
-          ),
-        ),
-      )
-      ..addScenario(
-        'vertical',
-        const Center(
-          child: RulerScaleMarker(
-            orientation: Axis.vertical,
-          ),
-        ),
-      );
+    final builder =
+        GoldenBuilder.column(
+            wrap: (widget) => SizedBox.square(
+              dimension: 200,
+              child: widget,
+            ),
+          )
+          ..addScenario(
+            'horizontal',
+            const Center(
+              child: RulerScaleMarker(
+                orientation: Axis.horizontal,
+              ),
+            ),
+          )
+          ..addScenario(
+            'vertical',
+            const Center(
+              child: RulerScaleMarker(
+                orientation: Axis.vertical,
+              ),
+            ),
+          );
 
     await tester.pumpWidgetBuilder(
       builder.build(),

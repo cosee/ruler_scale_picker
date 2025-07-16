@@ -13,14 +13,14 @@ class NumericRulerScalePickerController extends ChangeNotifier
     this.lastValue = 10,
     this.interval = 1,
     int initialValue = 0,
-  })  : assert(
-          firstValue < lastValue,
-          '[lastValue] must be greater than [firstValue]',
-        ),
-        assert(
-          interval > 0,
-          '[interval] must not be smaller 1',
-        ) {
+  }) : assert(
+         firstValue < lastValue,
+         '[lastValue] must be greater than [firstValue]',
+       ),
+       assert(
+         interval > 0,
+         '[interval] must not be smaller 1',
+       ) {
     _length = _calculateLength(firstValue, lastValue, interval);
 
     final isValidValue = _isValidValue(initialValue);

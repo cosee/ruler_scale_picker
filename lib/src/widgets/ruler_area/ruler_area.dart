@@ -17,9 +17,9 @@ class RulerArea<T> extends StatelessWidget {
     required this.scaleMarkerBuilder,
     super.key,
   }) : assert(
-          indicatorExtend > 0,
-          '[indicatorExtend] must be greater 0',
-        );
+         indicatorExtend > 0,
+         '[indicatorExtend] must be greater 0',
+       );
 
   /// A controller to handle value changes.
   final RulerScalePickerController<T> rulerController;

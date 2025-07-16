@@ -4,20 +4,21 @@ import 'package:ruler_scale_picker/src/widgets/default/button.dart';
 
 void main() {
   testGoldens('RulerButton', (tester) async {
-    final builder = GoldenBuilder.column(
-      wrap: (widget) => SizedBox.square(
-        dimension: 100,
-        child: widget,
-      ),
-    )..addScenario(
-        'button',
-        RulerButton(
-          // No action needed for test.
-          // ignore: no-empty-block
-          onPressed: () {},
-          icon: Icons.remove,
-        ),
-      );
+    final builder =
+        GoldenBuilder.column(
+          wrap: (widget) => SizedBox.square(
+            dimension: 100,
+            child: widget,
+          ),
+        )..addScenario(
+          'button',
+          RulerButton(
+            // No action needed for test.
+            // ignore: no-empty-block
+            onPressed: () {},
+            icon: Icons.remove,
+          ),
+        );
 
     await tester.pumpWidgetBuilder(
       builder.build(),

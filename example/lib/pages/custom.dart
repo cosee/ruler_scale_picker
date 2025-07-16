@@ -161,12 +161,12 @@ class _CustomRulerPicker extends StatelessWidget {
   // Needed for builder.
   // ignore: avoid-unused-parameters
   Widget _valueDisplayBuilder(BuildContext context, String value) => Padding(
-        padding: const EdgeInsets.all(8),
-        child: Text(
-          value,
-          style: const TextStyle(fontSize: 30),
-        ),
-      );
+    padding: const EdgeInsets.all(8),
+    child: Text(
+      value,
+      style: const TextStyle(fontSize: 30),
+    ),
+  );
 
   // Needed for builder.
   // ignore: avoid-unused-parameters
