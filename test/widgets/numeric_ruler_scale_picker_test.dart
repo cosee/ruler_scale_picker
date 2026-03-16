@@ -12,111 +12,110 @@ import 'package:ruler_scale_picker/src/widgets/ruler_area/scroll_area.dart';
 
 void main() {
   testGoldens('NumericRulerPicker', (tester) async {
-    final builder =
-        GoldenBuilder.column(
-            wrap: (widget) => SizedBox.square(
-              dimension: 400,
-              child: widget,
-            ),
-          )
-          ..addScenario(
-            'horizontal',
-            const NumericRulerScalePicker(),
-          )
-          ..addScenario(
-            'vertical',
-            const NumericRulerScalePicker(
-              options: RulerScalePickerOptions(orientation: Axis.vertical),
-            ),
-          )
-          ..addScenario(
-            'horizontal, last position',
-            NumericRulerScalePicker(
-              controller: NumericRulerScalePickerController(initialValue: 10),
-            ),
-          )
-          ..addScenario(
-            'vertical, last position',
-            NumericRulerScalePicker(
-              controller: NumericRulerScalePickerController(initialValue: 10),
-              options: const RulerScalePickerOptions(
-                orientation: Axis.vertical,
-              ),
-            ),
-          )
-          ..addScenario(
-            'horizontal, very long',
-            NumericRulerScalePicker(
-              controller: NumericRulerScalePickerController(lastValue: 1000),
-            ),
-          )
-          ..addScenario(
-            'vertical, very long',
-            NumericRulerScalePicker(
-              options: const RulerScalePickerOptions(
-                orientation: Axis.vertical,
-              ),
-              controller: NumericRulerScalePickerController(lastValue: 1000),
-            ),
-          )
-          ..addScenario(
-            'horizontal, very long, last position',
-            NumericRulerScalePicker(
-              controller: NumericRulerScalePickerController(
-                lastValue: 1000,
-                initialValue: 1000,
-              ),
-            ),
-          )
-          ..addScenario(
-            'vertical, very long, last position',
-            NumericRulerScalePicker(
-              options: const RulerScalePickerOptions(
-                orientation: Axis.vertical,
-              ),
-              controller: NumericRulerScalePickerController(
-                lastValue: 1000,
-                initialValue: 1000,
-              ),
-            ),
-          )
-          ..addScenario(
-            'horizontal, very extended',
-            NumericRulerScalePicker(
-              options: const RulerScalePickerOptions(indicatorExtend: 66),
-              controller: NumericRulerScalePickerController(
-                initialValue: 3,
-              ),
-            ),
-          )
-          ..addScenario(
-            'vertical, very extended',
-            NumericRulerScalePicker(
-              options: const RulerScalePickerOptions(
-                indicatorExtend: 66,
-                orientation: Axis.vertical,
-              ),
-              controller: NumericRulerScalePickerController(
-                initialValue: 4,
-              ),
-            ),
-          )
-          ..addScenario(
-            'disabled',
-            const NumericRulerScalePicker(
-              options: RulerScalePickerOptions(
-                isEnabled: false,
-              ),
-            ),
-          )
-          ..addScenario(
-            'no controls',
-            const NumericRulerScalePicker(
-              options: RulerScalePickerOptions(
-                showControls: false,
-              ),
-            ),
-          );
+    final builder = GoldenBuilder.column(
+      wrap: (widget) => SizedBox.square(
+        dimension: 400,
+        child: widget,
+      ),
+    )
+      ..addScenario(
+        'horizontal',
+        const NumericRulerScalePicker(),
+      )
+      ..addScenario(
+        'vertical',
+        const NumericRulerScalePicker(
+          options: RulerScalePickerOptions(orientation: Axis.vertical),
+        ),
+      )
+      ..addScenario(
+        'horizontal, last position',
+        NumericRulerScalePicker(
+          controller: NumericRulerScalePickerController(initialValue: 10),
+        ),
+      )
+      ..addScenario(
+        'vertical, last position',
+        NumericRulerScalePicker(
+          controller: NumericRulerScalePickerController(initialValue: 10),
+          options: const RulerScalePickerOptions(
+            orientation: Axis.vertical,
+          ),
+        ),
+      )
+      ..addScenario(
+        'horizontal, very long',
+        NumericRulerScalePicker(
+          controller: NumericRulerScalePickerController(lastValue: 1000),
+        ),
+      )
+      ..addScenario(
+        'vertical, very long',
+        NumericRulerScalePicker(
+          options: const RulerScalePickerOptions(
+            orientation: Axis.vertical,
+          ),
+          controller: NumericRulerScalePickerController(lastValue: 1000),
+        ),
+      )
+      ..addScenario(
+        'horizontal, very long, last position',
+        NumericRulerScalePicker(
+          controller: NumericRulerScalePickerController(
+            lastValue: 1000,
+            initialValue: 1000,
+          ),
+        ),
+      )
+      ..addScenario(
+        'vertical, very long, last position',
+        NumericRulerScalePicker(
+          options: const RulerScalePickerOptions(
+            orientation: Axis.vertical,
+          ),
+          controller: NumericRulerScalePickerController(
+            lastValue: 1000,
+            initialValue: 1000,
+          ),
+        ),
+      )
+      ..addScenario(
+        'horizontal, very extended',
+        NumericRulerScalePicker(
+          options: const RulerScalePickerOptions(indicatorExtend: 66),
+          controller: NumericRulerScalePickerController(
+            initialValue: 3,
+          ),
+        ),
+      )
+      ..addScenario(
+        'vertical, very extended',
+        NumericRulerScalePicker(
+          options: const RulerScalePickerOptions(
+            indicatorExtend: 66,
+            orientation: Axis.vertical,
+          ),
+          controller: NumericRulerScalePickerController(
+            initialValue: 4,
+          ),
+        ),
+      )
+      ..addScenario(
+        'disabled',
+        const NumericRulerScalePicker(
+          options: RulerScalePickerOptions(
+            isEnabled: false,
+          ),
+        ),
+      )
+      ..addScenario(
+        'no controls',
+        const NumericRulerScalePicker(
+          options: RulerScalePickerOptions(
+            showControls: false,
+          ),
+        ),
+      );
 
     await tester.pumpWidgetBuilder(
       builder.build(),

@@ -49,7 +49,7 @@ class RulerScalePicker<T> extends StatelessWidget {
       deactivated: !options.isEnabled,
       child: ListenableBuilder(
         listenable: controller,
-        builder: (_, _) => Column(
+        builder: (_, __) => Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             if (options.showControls)
